@@ -71,8 +71,8 @@ main {
     text-align: center;
 }
 .main--artwork img {
-    height: 9rem;
-    width: 12rem;
+    height: 10rem;
+    width: 14rem;
     border-radius: 8px;
     box-shadow: 1px 2px 3px;
     cursor: pointer;
