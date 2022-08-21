@@ -1,107 +1,100 @@
 :root {
-    --main-font: "Playfair Display", serif; 
-  }
+    --main-font: "Playfair Display", serif;
+    --main-color: rgb(177, 96, 24);
+    --secondary-color: rgb(9, 9, 9);
+    --white:rgb(247, 247, 247);
+}
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: var(--main-font);
 }
 
+html {
+    font-family: var(--main-font);
+    height: 100vh;
+}
+
+body {
+    height: 100%;
+}
 
 /* Header */
 
 header {
-    /* position: sticky;
-    top: 0; */
-    height: 1173px;
-    display: flex;
-    justify-content: center;
-    background-color: white;
-}
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    display: grid;
-    grid-template-columns: 3fr 5fr;
-    height: 7%;
+    height: 6rem;
+    min-width: 320px;
     width: 100%;
-    border-bottom: 0.px solid grey;
-    background-color: black;
-    border: none;
-    box-shadow: 1px 1px 4px;
+    background-color: var(--secondary-color);
 }
-.img-cover {
-    position: absolute;
-    width: 1595px;
-}
-.logo-container {
+
+nav {
     display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    width: 6rem;
-    margin-left: 4rem;
-}
-.logo {
-    margin-top: 1rem;
-    width: 5rem;
-    height: 2.2rem;
-}
-.menu {
     height: 100%;
-    z-index: 1;
-    color: white;
-    width: 500px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
-    font-weight: 600;
+    margin-left: 1rem;
 }
-.menu a {
+
+nav a {
     text-decoration: none;
-    color:rgb(255, 255, 255);
-    font-weight: bolder;
-    text-shadow: 3px 3px 2px black;
+    color: var(--white);
 }
-.menu a:hover {
-    color: rgba(255, 255, 255, 0.817);
-}
-.menu a:active {
-    color: rgb(254, 254, 254);
-}
+
 
 
 
 /* Main */
 
 main {
-    height: 100vh;
+    height: 100%;
     width: 100%;
 }
-h1 {
+.main--title {
     text-align: center;
-    margin-top: 4rem;
+    line-height: 4rem;
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+    height: 5rem;
 }
-.artwork {
-    height: 90vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    row-gap: 10px;
-    justify-items: center;
-    align-content: space-evenly;
-    margin-left: 3rem;
-    margin-right: 3rem;
+.main--artwork {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
 }
-.artwork img {
-    height: 8rem;
-    width: 9rem;
+.main--img-container {
+    text-align: center;
+}
+.main--artwork img {
+    height: 9rem;
+    width: 12rem;
     border-radius: 8px;
     box-shadow: 1px 2px 3px;
     cursor: pointer;
+}
+.art-name {
+    margin-top: 1rem;
+}
+.price-tag {
+    color: rgb(77, 77, 77);
+    font-size: 500;
+}
+.img-button {
+    border: none;
+    width: 8rem;
+    height: 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--main-color);
+    font-size: 15px;
+    font-weight: lighter;
+    margin-bottom: 2rem;
 }
 .artwork img:hover {
     opacity: 0.9;
@@ -110,55 +103,33 @@ h1 {
     opacity: 1;
     box-shadow: inset 1px 2px 3px;
 }
-.img-container {
-    text-align: center;
-}
-.art-name {
-    margin-top: 0.5rem;
-}
-.price-tag {
-    color: rgb(77, 77, 77);
-    font-size: 500;
-}
-.img-button {
-    border: none;
-    width: 80px;
-    height: 23px;
-    border-radius: 8px;
-    margin-top: 9px;
-    cursor: pointer;
-    background-color: transparent;
-    color: rgb(177, 96, 24);
-    font-size: 15px;
-    font-weight: 800;
-}
 .img-button:hover {
     color: rgba(177, 95, 24, 0.427);
 }
 .img-button:active {
-    color: rgb(177, 96, 24);
+    color: var(--main-color);
 }
 
 
 /* Footer */
 
 footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    align-items: center;
-    height: 200px;
-    background-color: rgb(177, 96, 24);
+    display: flex;
+    flex-direction: column;
+    margin-top: 16rem;
+    height: 14rem;
+    background-color: var(--main-color);
 }
-.footer-menu {
-    height: 70%;
+.footer--menu {
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     list-style: none;
-    font-size: 16px;
+    font-size: 12px;
+    margin-left: 2rem;
 }
-.footer-menu a {
+.footer--menu a {
     color: white;
     text-decoration: none;
 }
@@ -169,6 +140,12 @@ footer {
     color: white;
 }
 
-.enya-logo {
-    width: 6rem;
+.footer--credits-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+    font-size: 12px;
 }
