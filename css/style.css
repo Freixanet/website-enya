@@ -34,7 +34,7 @@ header {
 nav {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     height: 100%;
     margin-left: 1rem;
 }
@@ -42,6 +42,12 @@ nav {
 nav a {
     text-decoration: none;
     color: var(--white);
+}
+
+.header--menu-button {
+    height: 25px;
+    width: 25px;
+    border: none;
 }
 
 
@@ -53,6 +59,15 @@ main {
     height: 100%;
     width: 100%;
 }
+.main--cover {
+    height: 55vh;
+    width: 100vw;
+}
+.main--cover img {
+    height: 100%;
+    width: 100%;
+}
+
 .main--title {
     text-align: center;
     line-height: 4rem;
@@ -118,7 +133,7 @@ main {
 footer {
     display: flex;
     flex-direction: column;
-    margin-top: 16rem;
+    margin-top: 50rem;
     height: 14rem;
     background-color: var(--main-color);
 }
