@@ -15,13 +15,11 @@ html {
     font-family: var(--main-font);
     height: 100vh;
 }
-
 body {
     height: 100%;
 }
 
 /* Header */
-
 header {
     height: 6rem;
     min-width: 320px;
@@ -30,7 +28,6 @@ header {
     position: sticky;
     top: 0;
 }
-
 nav {
     display: flex;
     align-items: center;
@@ -38,41 +35,55 @@ nav {
     height: 100%;
     margin-left: 1rem;
 }
-
 nav a {
     text-decoration: none;
     color: var(--white);
 }
 
-.header--menu-button {
-    height: 25px;
+/* Header Menu Button */
+.header--icon-container {
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .bar1, .bar2, .bar3 {
     width: 25px;
-    border: none;
-}
-
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    margin: 6px 0;
+    transition: 0.4s;
+    border-radius: 6px;
+  }
+  /* Rotate first bar */
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+  }
+  /* Fade out the second bar */
+  .change .bar2 {
+    opacity: 0;
+  }
+  /* Rotate last bar */
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+  }
 
 
 
 /* Main */
-
-main {
-    height: 100%;
-    width: 100%;
-}
 .main--cover {
-    height: 86.2vh;
+    height: 86.3vh;
     width: 100vw;
 }
 .main--cover img {
     height: 100%;
     width: 100%;
 }
-
 .main--title {
     text-align: center;
-    line-height: 4rem;
-    margin-top: 3rem;
-    margin-bottom: 6rem;
+    margin-top: 6rem;
+    margin-bottom: 2rem;
     height: 5rem;
 }
 .main--artwork {
@@ -81,8 +92,8 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    height: 100%;
     width: 100%;
+    margin-bottom: 4rem;
 }
 .main--img-container {
     text-align: center;
@@ -91,8 +102,9 @@ main {
     height: 10rem;
     width: 14rem;
     border-radius: 8px;
-    box-shadow: 1px 2px 3px;
+    box-shadow: 1px 3px 3px;
     cursor: pointer;
+    border: 4px solid burlywood;
 }
 .art-name {
     margin-top: 1rem;
@@ -121,7 +133,7 @@ main {
     box-shadow: inset 1px 2px 3px;
 }
 .img-button:hover {
-    color: rgba(177, 95, 24, 0.427);
+    color: rgb(194, 91, 1);
 }
 .img-button:active {
     color: var(--main-color);
@@ -129,11 +141,9 @@ main {
 
 
 /* Footer */
-
 footer {
     display: flex;
     flex-direction: column;
-    margin-top: 60rem;
     height: 14rem;
     background-color: var(--main-color);
 }
